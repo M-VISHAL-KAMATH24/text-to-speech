@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to voice speed</title>
+    <title>Text to Voice Speech</title>
 </head>
-
 <body>
     <div class="container">
-
         <div class="wrapper">
             <form onsubmit="return false;">
                 <div class="input_field">
-                    <label>Write Your Text To Speech</label>
-                    <textarea id="text" placeholder="Write your text here"></textarea>
+                    <label>Upload Text/PDF File or Write Text</label>
+                    <input type="file" id="fileUpload" accept=".txt,.pdf">
+                    <textarea id="text" placeholder="Write your text here or upload a file"></textarea>
                 </div>
 
                 <div class="input_field">
                     <label>Select voices</label>
-                    <select id="voice">
-                    </select>
+                    <select id="voice"></select>
                 </div>
-
 
                 <div class="input_field input_field_row">
                     <div class="input_col">
@@ -36,16 +32,13 @@
                         <label>Rate</label>
                         <input type="range" id="rate" max="3" min="0" value="1" step="0.1">
                         <span id="rate_amount">1.0</span>
-
                     </div>
                     <div class="input_col">
                         <label>Pitch</label>
                         <input type="range" id="pitch" max="1" min="0" value="1" step="0.1">
                         <span id="pitch_amount">1.0</span>
-
                     </div>
                 </div>
-
 
                 <div class="input_field input_field_row">
                     <div class="input_col">
@@ -63,12 +56,8 @@
                 </div>
             </form>
         </div>
-
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
-
 </html>
